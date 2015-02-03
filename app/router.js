@@ -10,9 +10,8 @@ Router.map(function() {
     this.route('new');
     this.resource('post', {path: '/:post_id'}, function(){
       this.route('edit');
-    })
-  })
-
+    });
+  });
 });
 
 export default Router;

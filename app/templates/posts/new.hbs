@@ -1,9 +1,12 @@
-<h1>New Post</h1>
+<div class="newPost">
+  <h1>New Post</h1>
 
-{{textarea placeholder="Add a title!" value=postTitle}}
-<div class="textBox">
-  {{textarea placeholder="Add a post!" value=postBody}}
-</div>
-<div class="createButton">
-  <button {{action 'newPost'}}>Save Post</button>
+  {{textarea placeholder="Add a title!" value=postTitle}}
+  <div class="textBox">
+    {{textarea placeholder="Add a post!" value=postBody}}
+  </div>
+  <div class="createButton">
+    <button {{action 'newPost'}}>Save Post</button>
+  </div>
+
 </div>

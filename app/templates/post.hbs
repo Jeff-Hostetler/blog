@@ -1,1 +1,14 @@
+<div class = "showPost">
+  <hr>
+  <h1>{{title}}</h1>
+  {{body}}
+  <br>
+  {{#link-to 'post.edit'}}
+   <h3>edit post</h3>
+  {{/link-to}}
+  <br>
+  <div class="deleteButton">
+    <button {{action 'deletePost' this}}>Delete Post</button>
+  </div>
+</div>
 {{outlet}}

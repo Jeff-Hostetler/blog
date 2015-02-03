@@ -1,6 +1,55 @@
 html, body {
   margin: 20px;
 }
-textarea, .editBody{
-  width = 20%;
+#title{
+  text-align:center;
+}
+/*posts*/
+.main{
+  width: 10%;
+  height: 900px;
+  border-sizing: border-box;
+  border-right: 3px solid grey;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  bottom:0;
+  text-align: center;
+}
+
+
+
+
+/*post*/
+
+.showPost, .editPost, .newPost{
+  padding-left: 15%;
+  padding-right: 5%;
+  text-align: left;
+
+}
+
+.deleteButton{
+  color:red;
+}
+.editTitle{
+
+}
+
+.editBody{
+  width: 40%;
+  height: 100px;
+}
+
+
+a:link {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+a:visited {
+  color:black
+}
+a:hover{
+  font-size: 115%;
 }

@@ -1,7 +1,11 @@
-<h1>edit blog post titled : {{title}}</h1>
+<div class="editPost">
+  <hr>
+  <h1>edit blog post titled : {{title}}</h1>
+  {{textarea value=title class='editTitle'}}
+  <br>
+  {{textarea value=body class='editBody'}}
+  <br>
+  <button {{action 'editPost' this}}>Save Post</button>
 
-{{textarea placeholder=body value=postTitle class='editBody'}}
-
-<div class="createButton">
-  <button {{action 'editPost'}}>Save Post</button>
 </div>
+{{outlet}}
