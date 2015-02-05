@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
   actions: {
     newPost: function() {
         var body = this.get('postBody');

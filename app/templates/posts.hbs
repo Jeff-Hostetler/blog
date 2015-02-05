@@ -1,8 +1,13 @@
 <div class="main">
 
 {{#link-to 'posts.new'}}
-  <h3>Create a post...</h3>
+  <h5>Create a post...</h5>
 {{/link-to}}
+<hr><hr>
+{{#link-to 'posts.search'}}
+  <h5>Search the blog</h5>
+{{/link-to}}
+<hr><hr>
 
 {{#each post in model}}
 <div class="post">
