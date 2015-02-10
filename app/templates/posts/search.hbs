@@ -1,12 +1,14 @@
 
 <div class="blogBody">
-  <h1>search</h1>
+  <h2>Search</h2>
 
   {{input placeholder='search...' value=term class='searchBar'}}
   <button {{action 'search'}}>Search</button>
   <br>
   {{#each post in model}}
-    {{post.title}}
+    {{#link-to 'post' post}}
+      {{post.title}}
+    {{/link-to}}
     <hr>
   {{/each}}
 </div>

@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  title: DS.attr('string'),
-  body: DS.attr('string'),
-  user: DS.belongsTo('user'),
+  first_name: DS.attr('string'),
+  last_name: DS.attr('string'),
+  posts: DS.hasMany('post'),
   comments: DS.hasMany('comment')
 });

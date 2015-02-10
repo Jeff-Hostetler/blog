@@ -1,0 +1,12 @@
+<div class ="blogBody">
+  <h2>Users</h2>
+  {{#each user in model}}
+    {{#link-to 'user' user}}
+      {{user.first_name}} {{user.last_name}}
+    {{/link-to}}
+    <hr>
+  {{/each}}
+
+</div>
+
+{{outlet}}

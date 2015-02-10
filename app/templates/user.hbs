@@ -1,0 +1,22 @@
+<div class ="blogBody">
+  <h3>{{first_name}} {{ last_name }}</h3>
+
+  <h4>Posts</h4>
+  <hr>
+
+  {{#each post in posts}}
+    {{#link-to 'post' post}}
+      {{post.title}}
+    {{/link-to}}
+    <br>
+  {{/each}}
+
+  <h4>Comments</h4>
+  <hr>
+  {{#each comment in comments}}
+    {{comment.body}}
+    <br>
+    - in: {{comment.post.title}}
+    <br>
+  {{/each}}
+</div>

@@ -2,5 +2,27 @@
   {{#link-to 'posts'}}
     <h1>Jeff Hostetler's Blog</h1>
   {{/link-to}}
-  {{outlet}}
 </div>
+
+<div class="main">
+  <hr><hr>
+  {{#link-to 'posts.new'}}
+    <h5>Create a post...</h5>
+  {{/link-to}}
+  <hr><hr>
+  {{#link-to 'posts.search'}}
+    <h5>Search the blog</h5>
+  {{/link-to}}
+  <hr><hr>
+  {{#link-to 'posts'}}
+    <h5>Posts</h5>
+  {{/link-to}}
+  <hr><hr>
+  {{#link-to 'users'}}
+    <h5>Users</h5>
+  {{/link-to}}
+  <hr><hr>
+
+</div>
+
+{{outlet}}

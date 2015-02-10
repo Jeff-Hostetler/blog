@@ -12,7 +12,6 @@ export default Ember.Controller.extend({
         that.set('model', posts)
       })
 
-
     }
   }
 

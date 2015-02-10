@@ -1,0 +1,21 @@
+
+<div class="blogBody">
+  <h2>Posts</h2>
+
+  {{#each post in model}}
+  <div class="post">
+    {{#link-to 'post' post}}
+      {{post.title}}
+    {{/link-to}}
+    <div class = "authName">
+      {{#link-to 'user' post.user}}
+        {{post.user.first_name}} {{post.user.last_name}}
+      {{/link-to}}
+    </div>
+    <hr>
+  </div>
+  {{/each}}
+
+</div>
+
+{{outlet}}

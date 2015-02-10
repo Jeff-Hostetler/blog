@@ -6,10 +6,16 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('posts', {path: '/'}, function(){
+  this.resource('posts', function(){
     this.route('new');
     this.route('search');
     this.resource('post', {path: '/:post_id'}, function(){
+      this.route('edit');
+    });
+  });
+  this.resource('users', function(){
+    this.route('new');
+    this.resource('user', {path: '/:user_id'}, function(){
       this.route('edit');
     });
   });

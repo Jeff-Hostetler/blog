@@ -1,14 +1,33 @@
 <div class = "blogBody">
   <hr>
   <h1>{{title}}</h1>
+  <p>
+    By:
+    {{#link-to 'user' user}}
+      {{user.first_name}} {{user.last_name}}
+    {{/link-to}}
+  </p>
   {{body}}
   <br>
   {{#link-to 'post.edit'}}
-   <h3>edit post</h3>
+  <hr>
+   <h5>Edit Post</h5>
   {{/link-to}}
+  <hr>
   <br>
+  {{outlet}}
   <div class="deleteButton">
     <button {{action 'deletePost' this}}>Delete Post</button>
   </div>
+  <h3>Comments</h3>
+  {{#each comment in comments}}
+    {{comment.body}}
+    <br>
+    {{#link-to 'user' comment.user}}
+       -  {{comment.user.first_name}} {{comment.user.last_name}}
+    {{/link-to}}
+    <br>
+  {{/each}}
+
+
 </div>
-{{outlet}}
