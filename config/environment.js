@@ -2,10 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
+    adapterURL: process.env.ADAPTER_URL,
     modulePrefix: 'blog',
     environment: environment,
     baseURL: '/',
-    adapterURL: process.env.ADAPTER_URL,
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -17,7 +17,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self' localhost:3000",
+      'connect-src': process.env.ADAPTER_URL,
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
