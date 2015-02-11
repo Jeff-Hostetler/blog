@@ -4,7 +4,7 @@
   <p>
     By:
     {{#link-to 'user' user}}
-      {{user.first_name}} {{user.last_name}}
+      {{user.firstName}} {{user.lastName}}
     {{/link-to}}
   </p>
   {{body}}
@@ -20,11 +20,13 @@
     <button {{action 'deletePost' this}}>Delete Post</button>
   </div>
   <h3>Comments</h3>
+  {{log comments}}
   {{#each comment in comments}}
     {{comment.body}}
     <br>
+    {{log comment}}
     {{#link-to 'user' comment.user}}
-       -  {{comment.user.first_name}} {{comment.user.last_name}}
+       -  {{comment.user.firstName}} {{comment.user.lastName}}
     {{/link-to}}
     <br>
   {{/each}}
