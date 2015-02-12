@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    adapterURL: process.env.ADAPTER_URL,
+    adapterURL: process.env.ADAPTER_URL || "http://localhost:3000",
     modulePrefix: 'blog',
     environment: environment,
     baseURL: '/',
